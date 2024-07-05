@@ -72,6 +72,17 @@
                                     <action selector="buttonGoster:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FBa-Fs-Dl1"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Xe0-tX-V0A">
+                                <rect key="frame" x="100" y="396" width="230" height="32"/>
+                                <segments>
+                                    <segment title="Yemekler"/>
+                                    <segment title="Tatlılar"/>
+                                    <segment title="İçecekler"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedDegisim:" destination="BYZ-38-t0r" eventType="valueChanged" id="Vzy-0z-R41"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -81,6 +92,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PlZ-Am-q73" secondAttribute="trailing" constant="50" id="5dO-KX-Fxe"/>
                             <constraint firstItem="08f-dX-Q2J" firstAttribute="top" secondItem="UgV-xk-cL1" secondAttribute="bottom" constant="50" id="AH3-rE-x8l"/>
                             <constraint firstItem="861-se-LUv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="DC6-bv-fxy"/>
+                            <constraint firstItem="Xe0-tX-V0A" firstAttribute="top" secondItem="bVM-wx-PbX" secondAttribute="bottom" constant="32" id="Hsg-Rb-Btb"/>
+                            <constraint firstItem="Xe0-tX-V0A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Iwr-Wv-8Sl"/>
                             <constraint firstAttribute="bottom" secondItem="wlk-Dq-eam" secondAttribute="bottom" constant="32" id="Jt5-2P-FUV"/>
                             <constraint firstItem="UgV-xk-cL1" firstAttribute="top" secondItem="PlZ-Am-q73" secondAttribute="bottom" constant="16" id="Pcc-5b-tiG"/>
                             <constraint firstItem="08f-dX-Q2J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T26-PV-uKX"/>
@@ -98,6 +111,7 @@
                     <connections>
                         <outlet property="labelSonuc" destination="861-se-LUv" id="suK-Ls-2nC"/>
                         <outlet property="mSwitch" destination="bVM-wx-PbX" id="Don-Jh-oii"/>
+                        <outlet property="segmentedController" destination="Xe0-tX-V0A" id="1bZ-r3-M6a"/>
                         <outlet property="textFieldGirdi" destination="PlZ-Am-q73" id="g3X-Zd-HII"/>
                         <outlet property="ımageView" destination="08f-dX-Q2J" id="60G-Gd-aFl"/>
                     </connections>

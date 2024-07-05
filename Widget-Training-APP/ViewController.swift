@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var mSwitch: UISwitch!
     
+    @IBOutlet weak var segmentedController: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -52,10 +54,19 @@ class ViewController: UIViewController {
         }
     }
     
-    
     @IBAction func buttonGoster(_ sender: Any) {
         
         print("Switch durum: \(mSwitch.isOn)")
+        let secilenIndeks = segmentedController.selectedSegmentIndex
+        let secilenKategori = segmentedController.titleForSegment(at: secilenIndeks)
+        print("Segmented durum: \(secilenKategori!)")
+    }
+        
+    @IBAction func segmentedDegisim(_ sender: UISegmentedControl) {
+        
+        let secilenIndeks = sender.selectedSegmentIndex
+        let secilenKategori = sender.titleForSegment(at: secilenIndeks)
+        print("Seçim: \(secilenKategori!)")
     }
     
 }
