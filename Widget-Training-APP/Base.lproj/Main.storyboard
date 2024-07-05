@@ -58,27 +58,46 @@
                                     <constraint firstAttribute="height" constant="48" id="dj6-eJ-qQ4"/>
                                 </constraints>
                             </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bVM-wx-PbX">
+                                <rect key="frame" x="190.66666666666666" y="333" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchDegisim:" destination="BYZ-38-t0r" eventType="valueChanged" id="aIP-XS-MWy"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlk-Dq-eam">
+                                <rect key="frame" x="177.33333333333334" y="859" width="75.333333333333343" height="41"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Göster"/>
+                                <connections>
+                                    <action selector="buttonGoster:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FBa-Fs-Dl1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="wlk-Dq-eam" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="073-cK-e8n"/>
                             <constraint firstItem="UgV-xk-cL1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1nt-k5-JZA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PlZ-Am-q73" secondAttribute="trailing" constant="50" id="5dO-KX-Fxe"/>
                             <constraint firstItem="08f-dX-Q2J" firstAttribute="top" secondItem="UgV-xk-cL1" secondAttribute="bottom" constant="50" id="AH3-rE-x8l"/>
                             <constraint firstItem="861-se-LUv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="DC6-bv-fxy"/>
+                            <constraint firstAttribute="bottom" secondItem="wlk-Dq-eam" secondAttribute="bottom" constant="32" id="Jt5-2P-FUV"/>
                             <constraint firstItem="UgV-xk-cL1" firstAttribute="top" secondItem="PlZ-Am-q73" secondAttribute="bottom" constant="16" id="Pcc-5b-tiG"/>
                             <constraint firstItem="08f-dX-Q2J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T26-PV-uKX"/>
                             <constraint firstItem="dAE-d4-val" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="T8W-Ge-czh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mha-P7-314" secondAttribute="trailing" constant="32" id="Wpj-3x-fbU"/>
                             <constraint firstItem="PlZ-Am-q73" firstAttribute="top" secondItem="861-se-LUv" secondAttribute="bottom" constant="16" id="d5c-8A-jDX"/>
                             <constraint firstItem="PlZ-Am-q73" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="ef7-Yb-9hi"/>
+                            <constraint firstItem="bVM-wx-PbX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ktI-oR-ROx"/>
                             <constraint firstItem="Mha-P7-314" firstAttribute="top" secondItem="PlZ-Am-q73" secondAttribute="bottom" constant="100" id="s3S-b6-7PI"/>
+                            <constraint firstItem="bVM-wx-PbX" firstAttribute="top" secondItem="08f-dX-Q2J" secondAttribute="bottom" constant="32" id="slZ-Ud-0Yz"/>
                             <constraint firstItem="861-se-LUv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tUj-CH-41m"/>
                             <constraint firstItem="dAE-d4-val" firstAttribute="top" secondItem="PlZ-Am-q73" secondAttribute="bottom" constant="100" id="vy6-z1-tCk"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="labelSonuc" destination="861-se-LUv" id="suK-Ls-2nC"/>
+                        <outlet property="mSwitch" destination="bVM-wx-PbX" id="Don-Jh-oii"/>
                         <outlet property="textFieldGirdi" destination="PlZ-Am-q73" id="g3X-Zd-HII"/>
                         <outlet property="ımageView" destination="08f-dX-Q2J" id="60G-Gd-aFl"/>
                     </connections>

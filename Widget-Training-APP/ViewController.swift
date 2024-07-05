@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var ımageView: UIImageView!
     
+    @IBOutlet weak var mSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +42,21 @@ class ViewController: UIViewController {
 
     }
     
+    @IBAction func switchDegisim(_ sender: UISwitch) {
+        
+        if sender.isOn {
+            print("Switch : ON")
+        }else{
+            print("Switch : OFF")
+
+        }
+    }
+    
+    
+    @IBAction func buttonGoster(_ sender: Any) {
+        
+        print("Switch durum: \(mSwitch.isOn)")
+    }
     
 }
 
