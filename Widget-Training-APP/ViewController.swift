@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var textFieldGirdi: UITextField!
     
+    @IBOutlet weak var ımageView: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -24,7 +27,20 @@ class ViewController: UIViewController {
         if let alinanVeri = textFieldGirdi.text {
             labelSonuc.text = alinanVeri
         }
+        
     }
+    
+    @IBAction func buttonMutlu(_ sender: Any) {
+        
+        ımageView.image = UIImage(named: "mutlu")
+    }
+    
+    
+    @IBAction func buttonUzgun(_ sender: Any) {
+        ımageView.image = UIImage(named: "uzgun")
+
+    }
+    
     
 }
 
