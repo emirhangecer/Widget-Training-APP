@@ -20,9 +20,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var segmentedController: UISegmentedControl!
     
+    @IBOutlet weak var labelSlider: UILabel!
+    
+    @IBOutlet weak var slider: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        labelSlider.text = String(Int(slider.value))
     }
 
     @IBAction func buttonYap(_ sender: Any) {
@@ -53,14 +57,6 @@ class ViewController: UIViewController {
 
         }
     }
-    
-    @IBAction func buttonGoster(_ sender: Any) {
-        
-        print("Switch durum: \(mSwitch.isOn)")
-        let secilenIndeks = segmentedController.selectedSegmentIndex
-        let secilenKategori = segmentedController.titleForSegment(at: secilenIndeks)
-        print("Segmented durum: \(secilenKategori!)")
-    }
         
     @IBAction func segmentedDegisim(_ sender: UISegmentedControl) {
         
@@ -69,5 +65,19 @@ class ViewController: UIViewController {
         print("Seçim: \(secilenKategori!)")
     }
     
+    
+    @IBAction func sliderDegisim(_ sender: UISlider) {
+        
+        labelSlider.text = String(Int(sender.value))
+    }
+    
+    @IBAction func buttonGoster(_ sender: Any) {
+        
+        print("Switch durum: \(mSwitch.isOn)")
+        let secilenIndeks = segmentedController.selectedSegmentIndex
+        let secilenKategori = segmentedController.titleForSegment(at: secilenIndeks)
+        print("Segmented durum: \(secilenKategori!)")
+        print("Slider Durum: \(slider.value)")
+    }
 }
 

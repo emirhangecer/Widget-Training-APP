@@ -83,24 +83,41 @@
                                     <action selector="segmentedDegisim:" destination="BYZ-38-t0r" eventType="valueChanged" id="Vzy-0z-R41"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQ5-uD-MhW">
+                                <rect key="frame" x="194" y="447" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Ill-cF-bLu">
+                                <rect key="frame" x="30" y="488" width="370" height="31"/>
+                                <connections>
+                                    <action selector="sliderDegisim:" destination="BYZ-38-t0r" eventType="valueChanged" id="ncF-rG-83w"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="wlk-Dq-eam" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="073-cK-e8n"/>
+                            <constraint firstItem="Ill-cF-bLu" firstAttribute="top" secondItem="kQ5-uD-MhW" secondAttribute="bottom" constant="20" id="0lC-Lq-0Gu"/>
                             <constraint firstItem="UgV-xk-cL1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1nt-k5-JZA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PlZ-Am-q73" secondAttribute="trailing" constant="50" id="5dO-KX-Fxe"/>
                             <constraint firstItem="08f-dX-Q2J" firstAttribute="top" secondItem="UgV-xk-cL1" secondAttribute="bottom" constant="50" id="AH3-rE-x8l"/>
                             <constraint firstItem="861-se-LUv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="DC6-bv-fxy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ill-cF-bLu" secondAttribute="trailing" constant="32" id="H5b-3l-M0E"/>
                             <constraint firstItem="Xe0-tX-V0A" firstAttribute="top" secondItem="bVM-wx-PbX" secondAttribute="bottom" constant="32" id="Hsg-Rb-Btb"/>
                             <constraint firstItem="Xe0-tX-V0A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Iwr-Wv-8Sl"/>
                             <constraint firstAttribute="bottom" secondItem="wlk-Dq-eam" secondAttribute="bottom" constant="32" id="Jt5-2P-FUV"/>
                             <constraint firstItem="UgV-xk-cL1" firstAttribute="top" secondItem="PlZ-Am-q73" secondAttribute="bottom" constant="16" id="Pcc-5b-tiG"/>
                             <constraint firstItem="08f-dX-Q2J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T26-PV-uKX"/>
                             <constraint firstItem="dAE-d4-val" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="T8W-Ge-czh"/>
+                            <constraint firstItem="kQ5-uD-MhW" firstAttribute="top" secondItem="Xe0-tX-V0A" secondAttribute="bottom" constant="20" id="VXo-Qo-q11"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mha-P7-314" secondAttribute="trailing" constant="32" id="Wpj-3x-fbU"/>
                             <constraint firstItem="PlZ-Am-q73" firstAttribute="top" secondItem="861-se-LUv" secondAttribute="bottom" constant="16" id="d5c-8A-jDX"/>
+                            <constraint firstItem="Ill-cF-bLu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="d9c-iI-Wbg"/>
                             <constraint firstItem="PlZ-Am-q73" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="ef7-Yb-9hi"/>
+                            <constraint firstItem="kQ5-uD-MhW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iKN-d8-YsF"/>
                             <constraint firstItem="bVM-wx-PbX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ktI-oR-ROx"/>
                             <constraint firstItem="Mha-P7-314" firstAttribute="top" secondItem="PlZ-Am-q73" secondAttribute="bottom" constant="100" id="s3S-b6-7PI"/>
                             <constraint firstItem="bVM-wx-PbX" firstAttribute="top" secondItem="08f-dX-Q2J" secondAttribute="bottom" constant="32" id="slZ-Ud-0Yz"/>
@@ -109,9 +126,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="labelSlider" destination="kQ5-uD-MhW" id="Hyw-qm-Ill"/>
                         <outlet property="labelSonuc" destination="861-se-LUv" id="suK-Ls-2nC"/>
                         <outlet property="mSwitch" destination="bVM-wx-PbX" id="Don-Jh-oii"/>
                         <outlet property="segmentedController" destination="Xe0-tX-V0A" id="1bZ-r3-M6a"/>
+                        <outlet property="slider" destination="Ill-cF-bLu" id="Rwi-xc-J9q"/>
                         <outlet property="textFieldGirdi" destination="PlZ-Am-q73" id="g3X-Zd-HII"/>
                         <outlet property="ımageView" destination="08f-dX-Q2J" id="60G-Gd-aFl"/>
                     </connections>
