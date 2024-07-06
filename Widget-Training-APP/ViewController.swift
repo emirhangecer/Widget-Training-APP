@@ -22,11 +22,16 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var labelSlider: UILabel!
     
+    @IBOutlet weak var labelStepper: UILabel!
+    
+    @IBOutlet weak var stepper: UIStepper!
+    
     @IBOutlet weak var slider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         labelSlider.text = String(Int(slider.value))
+        labelStepper.text = String(Int(stepper.value))
     }
 
     @IBAction func buttonYap(_ sender: Any) {
@@ -71,6 +76,11 @@ class ViewController: UIViewController {
         labelSlider.text = String(Int(sender.value))
     }
     
+    @IBAction func stepperDegisim(_ sender: UIStepper) {
+        labelStepper.text = String(Int(sender.value))
+    }
+    
+    
     @IBAction func buttonGoster(_ sender: Any) {
         
         print("Switch durum: \(mSwitch.isOn)")
@@ -78,6 +88,7 @@ class ViewController: UIViewController {
         let secilenKategori = segmentedController.titleForSegment(at: secilenIndeks)
         print("Segmented durum: \(secilenKategori!)")
         print("Slider Durum: \(slider.value)")
+        print("Stepper Durum: \(stepper.value)")
     }
 }
 

@@ -95,6 +95,18 @@
                                     <action selector="sliderDegisim:" destination="BYZ-38-t0r" eventType="valueChanged" id="ncF-rG-83w"/>
                                 </connections>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4L-9S-k9N">
+                                <rect key="frame" x="194" y="538" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" maximumValue="10" stepValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="xD7-lz-o3E">
+                                <rect key="frame" x="168" y="579" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepperDegisim:" destination="BYZ-38-t0r" eventType="valueChanged" id="f2s-Co-kbL"/>
+                                </connections>
+                            </stepper>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -117,20 +129,26 @@
                             <constraint firstItem="PlZ-Am-q73" firstAttribute="top" secondItem="861-se-LUv" secondAttribute="bottom" constant="16" id="d5c-8A-jDX"/>
                             <constraint firstItem="Ill-cF-bLu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="d9c-iI-Wbg"/>
                             <constraint firstItem="PlZ-Am-q73" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="ef7-Yb-9hi"/>
+                            <constraint firstItem="V4L-9S-k9N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gRg-Ku-pDS"/>
                             <constraint firstItem="kQ5-uD-MhW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iKN-d8-YsF"/>
+                            <constraint firstItem="xD7-lz-o3E" firstAttribute="top" secondItem="V4L-9S-k9N" secondAttribute="bottom" constant="20" id="imc-Ks-9E6"/>
                             <constraint firstItem="bVM-wx-PbX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ktI-oR-ROx"/>
+                            <constraint firstItem="V4L-9S-k9N" firstAttribute="top" secondItem="Ill-cF-bLu" secondAttribute="bottom" constant="20" id="oSR-Ab-ZiM"/>
                             <constraint firstItem="Mha-P7-314" firstAttribute="top" secondItem="PlZ-Am-q73" secondAttribute="bottom" constant="100" id="s3S-b6-7PI"/>
                             <constraint firstItem="bVM-wx-PbX" firstAttribute="top" secondItem="08f-dX-Q2J" secondAttribute="bottom" constant="32" id="slZ-Ud-0Yz"/>
                             <constraint firstItem="861-se-LUv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tUj-CH-41m"/>
+                            <constraint firstItem="xD7-lz-o3E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tq0-pM-LSg"/>
                             <constraint firstItem="dAE-d4-val" firstAttribute="top" secondItem="PlZ-Am-q73" secondAttribute="bottom" constant="100" id="vy6-z1-tCk"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="labelSlider" destination="kQ5-uD-MhW" id="Hyw-qm-Ill"/>
                         <outlet property="labelSonuc" destination="861-se-LUv" id="suK-Ls-2nC"/>
+                        <outlet property="labelStepper" destination="V4L-9S-k9N" id="DUr-3Q-Und"/>
                         <outlet property="mSwitch" destination="bVM-wx-PbX" id="Don-Jh-oii"/>
                         <outlet property="segmentedController" destination="Xe0-tX-V0A" id="1bZ-r3-M6a"/>
                         <outlet property="slider" destination="Ill-cF-bLu" id="Rwi-xc-J9q"/>
+                        <outlet property="stepper" destination="xD7-lz-o3E" id="zBx-xE-DTn"/>
                         <outlet property="textFieldGirdi" destination="PlZ-Am-q73" id="g3X-Zd-HII"/>
                         <outlet property="ımageView" destination="08f-dX-Q2J" id="60G-Gd-aFl"/>
                     </connections>
