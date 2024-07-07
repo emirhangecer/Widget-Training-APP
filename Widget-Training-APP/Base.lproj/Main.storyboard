@@ -107,6 +107,27 @@
                                     <action selector="stepperDegisim:" destination="BYZ-38-t0r" eventType="valueChanged" id="f2s-Co-kbL"/>
                                 </connections>
                             </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6k-VK-raO">
+                                <rect key="frame" x="32" y="649" width="65" height="41"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Başla"/>
+                                <connections>
+                                    <action selector="buttonBasla:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fv1-r8-j6Q"/>
+                                    <action selector="buttonMutlu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f0u-Ba-SUB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EdU-XV-21t">
+                                <rect key="frame" x="346" y="649" width="52" height="41"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Dur"/>
+                                <connections>
+                                    <action selector="buttonDur:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ent-wU-gZJ"/>
+                                    <action selector="buttonUzgun:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PG8-Ii-Kxt"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="cXn-Gj-AMW">
+                                <rect key="frame" x="196.66666666666666" y="651" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -117,15 +138,19 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PlZ-Am-q73" secondAttribute="trailing" constant="50" id="5dO-KX-Fxe"/>
                             <constraint firstItem="08f-dX-Q2J" firstAttribute="top" secondItem="UgV-xk-cL1" secondAttribute="bottom" constant="50" id="AH3-rE-x8l"/>
                             <constraint firstItem="861-se-LUv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="DC6-bv-fxy"/>
+                            <constraint firstItem="cXn-Gj-AMW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H2x-k5-SD5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ill-cF-bLu" secondAttribute="trailing" constant="32" id="H5b-3l-M0E"/>
                             <constraint firstItem="Xe0-tX-V0A" firstAttribute="top" secondItem="bVM-wx-PbX" secondAttribute="bottom" constant="32" id="Hsg-Rb-Btb"/>
                             <constraint firstItem="Xe0-tX-V0A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Iwr-Wv-8Sl"/>
                             <constraint firstAttribute="bottom" secondItem="wlk-Dq-eam" secondAttribute="bottom" constant="32" id="Jt5-2P-FUV"/>
                             <constraint firstItem="UgV-xk-cL1" firstAttribute="top" secondItem="PlZ-Am-q73" secondAttribute="bottom" constant="16" id="Pcc-5b-tiG"/>
+                            <constraint firstItem="cXn-Gj-AMW" firstAttribute="top" secondItem="xD7-lz-o3E" secondAttribute="bottom" constant="40" id="Q2c-Fc-FAZ"/>
+                            <constraint firstItem="R6k-VK-raO" firstAttribute="top" secondItem="Ill-cF-bLu" secondAttribute="bottom" constant="131" id="SH3-jB-z2p"/>
                             <constraint firstItem="08f-dX-Q2J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T26-PV-uKX"/>
                             <constraint firstItem="dAE-d4-val" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="T8W-Ge-czh"/>
                             <constraint firstItem="kQ5-uD-MhW" firstAttribute="top" secondItem="Xe0-tX-V0A" secondAttribute="bottom" constant="20" id="VXo-Qo-q11"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mha-P7-314" secondAttribute="trailing" constant="32" id="Wpj-3x-fbU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EdU-XV-21t" secondAttribute="trailing" constant="32" id="bwY-EX-ops"/>
                             <constraint firstItem="PlZ-Am-q73" firstAttribute="top" secondItem="861-se-LUv" secondAttribute="bottom" constant="16" id="d5c-8A-jDX"/>
                             <constraint firstItem="Ill-cF-bLu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="d9c-iI-Wbg"/>
                             <constraint firstItem="PlZ-Am-q73" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="ef7-Yb-9hi"/>
@@ -134,14 +159,17 @@
                             <constraint firstItem="xD7-lz-o3E" firstAttribute="top" secondItem="V4L-9S-k9N" secondAttribute="bottom" constant="20" id="imc-Ks-9E6"/>
                             <constraint firstItem="bVM-wx-PbX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ktI-oR-ROx"/>
                             <constraint firstItem="V4L-9S-k9N" firstAttribute="top" secondItem="Ill-cF-bLu" secondAttribute="bottom" constant="20" id="oSR-Ab-ZiM"/>
+                            <constraint firstItem="EdU-XV-21t" firstAttribute="top" secondItem="Ill-cF-bLu" secondAttribute="bottom" constant="131" id="pYD-Ct-8lg"/>
                             <constraint firstItem="Mha-P7-314" firstAttribute="top" secondItem="PlZ-Am-q73" secondAttribute="bottom" constant="100" id="s3S-b6-7PI"/>
                             <constraint firstItem="bVM-wx-PbX" firstAttribute="top" secondItem="08f-dX-Q2J" secondAttribute="bottom" constant="32" id="slZ-Ud-0Yz"/>
+                            <constraint firstItem="R6k-VK-raO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="t57-3n-EVH"/>
                             <constraint firstItem="861-se-LUv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tUj-CH-41m"/>
                             <constraint firstItem="xD7-lz-o3E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tq0-pM-LSg"/>
                             <constraint firstItem="dAE-d4-val" firstAttribute="top" secondItem="PlZ-Am-q73" secondAttribute="bottom" constant="100" id="vy6-z1-tCk"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="indicator" destination="cXn-Gj-AMW" id="4oY-TG-ebs"/>
                         <outlet property="labelSlider" destination="kQ5-uD-MhW" id="Hyw-qm-Ill"/>
                         <outlet property="labelSonuc" destination="861-se-LUv" id="suK-Ls-2nC"/>
                         <outlet property="labelStepper" destination="V4L-9S-k9N" id="DUr-3Q-Und"/>
